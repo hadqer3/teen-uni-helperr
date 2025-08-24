@@ -1,73 +1,10 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-  <meta charset="UTF-8">
-  <title>UniHelper — сайт с ИИ-чатом</title>
-  <style>
-    body {
-      font-family: -apple-system, system-ui, Arial, sans-serif;
-      margin: 0;
-      background: #f7f7f7;
-    }
-    header {
-      text-align: center;
-      background: #fff;
-      border-bottom: 1px solid #eee;
-      padding: 20px;
-    }
-    .wrap {
-      max-width: 900px;
-      margin: 20px auto;
-      padding: 20px;
-    }
-    .card {
-      background: #fff;
-      border: 1px solid #eee;
-      border-radius: 16px;
-      padding: 20px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-    }
-    footer {
-      padding: 20px;
-      text-align: center;
-      color: #888;
-      font-size: 14px;
-    }
-  </style>
-</head>
-<body>
-  <header>
-    <h1>UniHelper — сайт с ИИ-чатом</h1>
-    <p>Задай вопрос — ассистент ответит</p>
-  </header>
-
-  <main class="wrap">
-    <div class="card">
-      <h2>ИИ-чат</h2>
-      <!-- Вот здесь подключается твой виджет -->
-      <script>
-        (function() {
-          if (window.chatbase || window.chatbaseCommandQueue) return;
-          window.chatbaseCommandQueue = [];
-          window.chatbase = new Proxy({}, {
-            get: (_, prop) => (...args) =>
-              window.chatbaseCommandQueue.push([prop, ...args]),
-          });
-        })();
-      </script>
-      <script src="https://www.chatbase.co/embed.min.js"
-              id="chatbase-script"
-              data-chatbot-id=<script>
-(function(){if(!window.chatbase||window.chatbase("getState")!=="initialized"){window.chatbase=(...arguments)=>{if(!window.chatbase.q){window.chatbase.q=[]}window.chatbase.q.push(arguments)};window.chatbase=new Proxy(window.chatbase,{get(target,prop){if(prop==="q"){return target.q}return(...args)=>target(prop,...args)}})}const onLoad=function(){const script=document.createElement("script");script.src="https://www.chatbase.co/embed.min.js";script.id="n_9fasKCZ-y8ruHQGFRtz";script.domain="www.chatbase.co";document.body.appendChild(script)};if(document.readyState==="complete"){onLoad()}else{window.addEventListener("load",onLoad)}})();
+<script>
+  window.chatbaseConfig = {
+    chatbotId: "n_9fasKCZ-y8ruHQGFRtz"
+  }
 </script>
-              defer>
-      </script>
-      <!-- Конец виджета -->
-    </div>
-  </main>
 
-  <footer>
-    © UniHelper
-  </footer>
-</body>
-</html>
+<script src="https://www.chatbase.co/embed.min.js"
+  id="n_9fasKCZ-y8ruHQGFRtz"
+  defer>
+</script>
